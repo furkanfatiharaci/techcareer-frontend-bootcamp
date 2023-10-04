@@ -1014,17 +1014,23 @@
     const aHarfiBiten = products.filter(product=>product.name.toLocaleUpperCase().endsWith('a'))
     console.log(aHarfiBiten.length)
     // id si 10 olan ürünün adını console a yazdır
+
     const idOn = products.find(product=>product.id === 10)
     console.log(idOn.name)
-    //discontinued false olan kaç ürün var
+
+    //discontinued false olan kaç ürün var/
+
     const discontinuedFalse = products.filter(product=>product.discontinued === false)
     console.log(discontinuedFalse.length)
+    
     // en pahalı ürünün adını console a yazdır
+
    products.sort((a,b)=> b.unitPrice - a.unitPrice);
    console.log(products[0].name)
 
     
     //en ucuz ürünün adını console a yazdır
+
     products.sort((a,b)=> a.unitPrice - b.unitPrice);
     console.log(products[0].name)
     
