@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sending</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<input type="text" id="input1" placeholder="Input 1">
+<input type="text" id="input2" placeholder="Input 2">
+<input type="text" id="input3" placeholder="Input 3">
+<button onclick="sendData()">Veriyi Gönder</button>
+
+<script>
+    function sendData() {
+        const input1Value = document.getElementById('input1').value;
+        const input2Value = document.getElementById('input2').value;
+        const input3Value = document.getElementById('input3').value;
+
+        const data = {
+            field1: input1Value,
+            field2: input2Value,
+            field3: input3Value
+        };
+
+        axios.post('https://northwind.vercel.app/api/products', data)
+            .then(response => {
+                console.log('Veri başarıyla gönderildi:', response);
+            })
+            .catch(error => {
+                console.error('Veri gönderilirken hata oluştu:', error);
+            });
+    }
+</script>
+
+</body>
+</html>
