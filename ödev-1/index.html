@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //"  Çağatay Yıldız" isimli metindeki boşlukları kaldır.    (REPLACE)
+
+      var text1 = "  Çağatay Yıldız";
+      var result1 = text1.replace(/ /g, "");
+      console.log(result1);
+
+      //"cagatay yildiz" kelimesindeki boşlukları temizle ve tüm harfleri büyült ( REPLACE ve UPPER)
+
+      var text2 = "cagatay yildiz";
+      var result2 = text2.replace(/ /g, "").toUpperCase();
+      console.log(result2);
+
+      //"******Çağatay Yıldız" isimli metindeki yıldızları kaldır (REPLACE)
+
+      var text3 = "******Çağatay Yıldız";
+      var result3 = text3.replace(/\*/g, "");
+      console.log(result3);
+
+      //"Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap (REPLACE)
+
+      var text4 = "Çağatay  Yıldız";
+      var result4 = text4.replace(/  /g, " ");
+      console.log(result4);
+
+      //"**Tech Career**" isimli metindeki yıldızları kaldır (REPLACE)
+
+      var text5 = "**Tech Career**";
+      var result5 = text5.replace(/\*/g, "");
+      console.log(result5);
+
+      //"Tech Career" isimli metnin soluna ve sağına 3 yıldız koy. "***Tech Career***" ( Normal toplama operatörü)
+      var text6 = "Tech Career";
+      var result6 = "***" + text6 + "***";
+      console.log(result6);
+
+      //"Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült (SUBSTRING)
+      var text7 = "Tech Career Bilişim teknolojileri";
+      var words = text7.split(" ");
+      words[words.length - 1] = words[words.length - 1].toUpperCase();
+      var result7 = words.join(" ");
+      console.log(result7);
+
+      //"Tech bilişim" kelimelerin ilk harflerini büyült (Substring ve upper)
+      var text8 = "Tech bilişim";
+      var result8 = text8
+        .split(" ")
+        .map((word) => word[0].toUpperCase() + word.substring(1))
+        .join(" ");
+      console.log(result8);
+    </script>
+  </body>
+</html>
