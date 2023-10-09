@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.track {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;  /* Bu, atlardan herhangi biri bitiş çizgisini geçtiğinde ekranın dışına taşmasını engeller. */
+}
+
+.horse {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    margin-bottom: 90px;
+    left: 0;
+    transform: translateX(0); /* Başlangıç pozisyonu */
+}
+
+button {
+    margin-top: 20px;
+}
+
+img{
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+}
+.finish-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: red;}
+
+   .track span{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: blue;
+    }
+#startBtn{
+    width: 80px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: aqua;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#winner{
+    color: blue;
+    margin-top: 20px;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
